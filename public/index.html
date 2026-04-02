@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МотоМагазин - Продаж мотоциклів</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <h1>МотоМагазин</h1>
+        <div class="header-subtitle">Premium moto shop</div>
+      </div>
+      <nav>
+        <a href="#home" class="nav-active">Головна</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#cart">Кошик (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <h2>Ласкаво просимо до МотоМагазину!</h2>
+      <p>Найкращі мотоцикли за доступними цінами.</p>
+    </section>
+
+    <section id="catalog" class="catalog">
+      <h2>Каталог мотоциклів</h2>
+      <div class="add-product">
+        <h3>Додати новий продукт</h3>
+        <form id="add-product-form">
+          <input type="text" id="product-name" placeholder="Назва мотоцикла" required>
+          <input type="number" id="product-price" placeholder="Ціна" required>
+          <input type="file" id="product-image" accept="image/*" required>
+          <textarea id="product-description" placeholder="Опис" required></textarea>
+          <button type="submit">Додати продукт</button>
+        </form>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section id="cart" class="cart">
+      <h2>Ваш кошик</h2>
+      <div id="cart-items"></div>
+      <button id="checkout-btn">Оформити замовлення</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 МотоМагазин. Всі права захищені.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
