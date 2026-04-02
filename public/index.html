@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МотоМагазин - Продаж мотоциклів</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <h1>МотоМагазин</h1>
+        <div class="header-subtitle">Premium moto shop</div>
+      </div>
+      <nav>
+        <a href="#home" class="nav-active">Головна</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#cart">Кошик (<span id="cart-count">0</span>)</a>
+        <a href="#orders" id="orders-link" style="display: none;">Мої замовлення</a>
+      </nav>
+      <div id="user-info" style="display: none;">
+        <span>Привіт, <span id="user-name"></span>!</span>
+        <button id="logout-btn">Вийти</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="auth-section">
+    <div class="auth-container">
+      <div class="auth-form">
+        <h2>Вхід</h2>
+        <form id="login-form">
+          <input type="email" id="login-email" placeholder="Email" required>
+          <input type="password" id="login-password" placeholder="Пароль" required>
+          <button type="submit">Увійти</button>
+        </form>
+      </div>
+      <div class="auth-form">
+        <h2>Реєстрація</h2>
+        <form id="register-form">
+          <input type="text" id="reg-username" placeholder="Ім'я користувача" required>
+          <input type="email" id="reg-email" placeholder="Email" required>
+          <input type="password" id="reg-password" placeholder="Пароль" required>
+          <button type="submit">Зареєструватися</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <main id="home">
+    <section class="hero">
+      <h2>Ласкаво просимо до МотоМагазину!</h2>
+      <p>Найкращі мотоцикли за доступними цінами.</p>
+    </section>
+
+    <section id="catalog" class="catalog">
+      <h2>Каталог мотоциклів</h2>
+      <div class="search-filter">
+        <input type="text" id="search-input" placeholder="Пошук мотоциклів...">
+        <select id="sort-select">
+          <option value="name">За назвою</option>
+          <option value="price-asc">Ціна: низька до високої</option>
+          <option value="price-desc">Ціна: висока до низької</option>
+        </select>
+      </div>
+      <div id="add-product" class="add-product" style="display: none;">
+        <h3>Додати новий продукт</h3>
+        <form id="add-product-form">
+          <input type="text" id="product-name" placeholder="Назва мотоцикла" required>
+          <input type="number" id="product-price" placeholder="Ціна" required>
+          <input type="file" id="product-image" accept="image/*" required>
+          <textarea id="product-description" placeholder="Опис" required></textarea>
+          <button type="submit">Додати продукт</button>
+        </form>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section id="cart" class="cart">
+      <h2>Ваш кошик</h2>
+      <div id="cart-items"></div>
+      <button id="checkout-btn">Оформити замовлення</button>
+    </section>
+
+    <section id="orders" class="orders" style="display: none;">
+      <h2>Мої замовлення</h2>
+      <div id="order-history"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 МотоМагазин. Всі права захищені.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Product Modal -->
+<div id="product-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="modal-content">
+      <!-- Product details will be inserted here -->
+    </div>
+  </div>
+</div>
