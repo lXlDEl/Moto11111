@@ -1,13 +1,13 @@
 :root {
-  --bg-start: #0b0b0d;
-  --bg-end: #181b1f;
-  --panel: rgba(21,24,29,0.75);
-  --panel-border: rgba(255,255,255,0.12);
-  --text: #f2f5f8;
-  --muted: #9aa5b6;
-  --accent: #53c4ff;
-  --accent-2: #8a65ff;
-  --shadow-deep: 0 15px 35px rgba(0,0,0,0.45);
+  --bg-start: #0a0a0a;
+  --bg-end: #1a1a1a;
+  --panel: rgba(25,25,25,0.85);
+  --panel-border: rgba(255,140,0,0.15);
+  --text: #f5f5f5;
+  --muted: #a0a0a0;
+  --accent: #FF8C00;
+  --accent-2: #DC143C;
+  --shadow-deep: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 * {
@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: 'Inter', 'Roboto', Arial, sans-serif;
-  background: radial-gradient(circle at 10% 20%, #1c2330 0%, #0c0f14 45%, var(--bg-end) 100%);
+  background: radial-gradient(circle at 10% 20%, #1a0f0a 0%, #0a0a0a 45%, var(--bg-end) 100%);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -30,16 +30,16 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, rgba(15,18,23,0.92), rgba(17,21,27,0.85));
+  background: linear-gradient(135deg, rgba(20,15,10,0.95), rgba(25,18,12,0.9));
   color: var(--text);
   padding: 1rem 1.5rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,140,0,0.2);
   backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
 .header-inner {
@@ -88,16 +88,16 @@ nav a {
 nav a:hover,
 nav a.nav-active {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(83,196,255,0.4), rgba(138,101,255,0.3));
-  box-shadow: 0 12px 28px rgba(83,196,255,0.3);
+  background: linear-gradient(135deg, rgba(255,140,0,0.5), rgba(220,20,60,0.4));
+  box-shadow: 0 12px 28px rgba(255,140,0,0.4);
   transform: translateY(-3px);
-  border-color: rgba(83,196,255,0.5);
+  border-color: rgba(255,140,0,0.6);
 }
 
 .hero {
-  background: linear-gradient(130deg, rgba(27,33,44,0.95), rgba(19,24,30,0.95));
+  background: linear-gradient(130deg, rgba(35,25,15,0.95), rgba(25,18,12,0.95));
   box-shadow: var(--shadow-deep);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,140,0,0.15);
   border-radius: 22px;
   padding: 3.5rem 2rem;
   text-align: center;
@@ -111,7 +111,7 @@ nav a.nav-active {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(83,196,255,0.2), rgba(138,101,255,0.2));
+  background: linear-gradient(135deg, rgba(255,140,0,0.25), rgba(220,20,60,0.2));
   z-index: 0;
   filter: blur(20px);
 }
@@ -171,7 +171,7 @@ nav a.nav-active {
 .search-filter input:focus, .search-filter select:focus {
   border-color: var(--accent);
   outline: none;
-  box-shadow: 0 0 15px rgba(83,196,255,0.2);
+  box-shadow: 0 0 15px rgba(255,140,0,0.3);
 }
 
 .products {
@@ -182,12 +182,12 @@ nav a.nav-active {
 }
 
 .product {
-  background: linear-gradient(135deg, rgba(24,26,34,0.95), rgba(20,23,30,0.95));
-  border: 1px solid rgba(83,196,255,0.12);
+  background: linear-gradient(135deg, rgba(30,25,20,0.95), rgba(20,18,15,0.95));
+  border: 1px solid rgba(255,140,0,0.2);
   border-radius: 24px;
   padding: 1.8rem;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -199,7 +199,7 @@ nav a.nav-active {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(83,196,255,0.15), transparent);
+  background: linear-gradient(135deg, rgba(255,140,0,0.2), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -207,8 +207,8 @@ nav a.nav-active {
 
 .product:hover {
   transform: translateY(-16px) scale(1.03);
-  box-shadow: 0 40px 80px rgba(83,196,255,0.25);
-  border-color: rgba(83,196,255,0.4);
+  box-shadow: 0 40px 80px rgba(255,140,0,0.35);
+  border-color: rgba(255,140,0,0.5);
 }
 
 .product:hover::before {
@@ -228,7 +228,7 @@ nav a.nav-active {
 
 .product:hover img {
   filter: brightness(1.15) contrast(1.2);
-  box-shadow: 0 20px 50px rgba(83,196,255,0.4);
+  box-shadow: 0 20px 50px rgba(255,140,0,0.5);
 }
 
 .product h3 {
@@ -243,14 +243,14 @@ nav a.nav-active {
 }
 
 .product button {
-  background: linear-gradient(135deg, #538cff 0%, #5dd6ff 100%);
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%);
   color: #ffffff;
   border: none;
   padding: 0.75rem 1.3rem;
   border-radius: 18px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(48,136,255,0.4);
+  box-shadow: 0 8px 20px rgba(255,140,0,0.5);
 }
 
 .product-actions {
@@ -275,13 +275,13 @@ nav a.nav-active {
 }
 
 .product-actions button:not(.delete-btn) {
-  background: linear-gradient(135deg, #53c4ff 0%, #8a65ff 100%);
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6347 100%);
   color: white;
 }
 
 .product-actions button:not(.delete-btn):hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(83,196,255,0.3);
+  box-shadow: 0 12px 24px rgba(255,140,0,0.4);
 }
 
 .product-actions button:not(.delete-btn):active {
@@ -302,8 +302,8 @@ nav a.nav-active {
   padding: 2.5rem 1.6rem;
   max-width: 1100px;
   margin: 2rem auto;
-  background: rgba(16,18,23,0.85);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(20,18,15,0.9);
+  border: 1px solid rgba(255,140,0,0.2);
   border-radius: 20px;
   box-shadow: var(--shadow-deep);
 }
@@ -339,7 +339,7 @@ nav a.nav-active {
 }
 
 #checkout-btn {
-  background: linear-gradient(135deg, #00b894 0%, #38ada9 100%);
+  background: linear-gradient(135deg, #FF8C00 0%, #DC143C 100%);
   color: #fff;
   border: none;
   padding: 1.2rem 2.2rem;
@@ -348,21 +348,21 @@ nav a.nav-active {
   font-weight: 700;
   display: block;
   margin: 1.3rem auto 0;
-  box-shadow: 0 10px 30px rgba(24,167,130,0.4);
+  box-shadow: 0 10px 30px rgba(255,140,0,0.5);
 }
 
 #checkout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(14,117,97,0.4);
+  box-shadow: 0 14px 35px rgba(255,140,0,0.6);
 }
 
 .add-product {
-  background: rgba(17,19,25,0.88);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(25,20,15,0.9);
+  border: 1px solid rgba(255,140,0,0.2);
   border-radius: 20px;
   padding: 1.5rem;
   margin-bottom: 1.8rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .add-product h3,
@@ -373,15 +373,15 @@ nav a.nav-active {
 .add-product input,
 .add-product textarea {
   color: #f4f7fc;
-  background: rgba(224, 156, 7, 0.95);
-  border: 1px solid rgba(111,126,151,0.35);
+  background: rgba(255, 140, 0, 0.15);
+  border: 1px solid rgba(255,140,0,0.3);
 }
 
 .add-product input:focus,
 .add-product textarea:focus {
-  border-color: rgba(83,196,255,0.7);
+  border-color: rgba(255,140,0,0.7);
   outline: none;
-  box-shadow: 0 0 25px rgba(83,196,255,0.25);
+  box-shadow: 0 0 25px rgba(255,140,0,0.35);
 }
 
 /* Auth Section */
@@ -410,7 +410,7 @@ nav a.nav-active {
 
 .auth-form h2 {
   margin-bottom: 1.5rem;
-  color: var(--accent);
+  color: #FF8C00;
   text-align: center;
 }
 
@@ -428,13 +428,13 @@ nav a.nav-active {
 .auth-form input:focus {
   border-color: var(--accent);
   outline: none;
-  box-shadow: 0 0 15px rgba(83,196,255,0.2);
+  box-shadow: 0 0 15px rgba(255,140,0,0.3);
 }
 
 .auth-form button {
   width: 100%;
   padding: 0.75rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, #FF8C00, #DC143C);
   border: none;
   border-radius: 8px;
   color: white;
@@ -445,7 +445,7 @@ nav a.nav-active {
 
 .auth-form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(83,196,255,0.3);
+  box-shadow: 0 8px 25px rgba(255,140,0,0.4);
 }
 
 #user-info {
@@ -513,12 +513,12 @@ nav a.nav-active {
 }
 
 footer {
-  background: linear-gradient(135deg, #131516 0%, #0e0f12 100%);
+  background: linear-gradient(135deg, #0f0d0a 0%, #0a0a05 100%);
   color: #9aa5b6;
   text-align: center;
   padding: 1.3rem;
   margin-top: 3rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255,140,0,0.1);
 }
 
 .header-inner {
